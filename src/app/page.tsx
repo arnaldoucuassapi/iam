@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
           <div className="w-4 h-4 bg-emerald-500 rounded-full animate-pulse"></div>
           <p className="text-lg">Construindo ótimas soluções para os problemas computacionais</p>
         </div>
-        <button className="py-2 px-4 mt-6 bg-white hover:bg-white/50 transition-opacity rounded-sm text-zinc-900 font-semibold">Baixar meu CV</button>
+
+        <Link download="/cv-arnaldoucuassapi.pdf" href="#" target="_blank">
+          <button className="py-2 px-4 mt-6 bg-white hover:bg-white/50 transition-opacity rounded-sm text-zinc-900 font-semibold">Baixar meu CV</button>
+        </Link>
       </section>
 
       <section className="">
