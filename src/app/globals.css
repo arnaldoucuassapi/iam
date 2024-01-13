@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --dots-size: 2px;
   --dots-gap: 24px;
