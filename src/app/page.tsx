@@ -1,3 +1,4 @@
+import { TechBoxImage } from "@/components/TechBoxImage"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -26,11 +27,11 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-4 uppercase">Tecnologias</h2>
         
         <div className="flex items-center gap-4">
-          <Image width={60} height={60} src="/next-js.svg" alt="Logo do framework web Next.js 13" />
-          <Image width={60} height={60} src="/react.svg" alt="Logo da biblioteca React" />
-          <Image width={60} height={60} src="/php.svg" alt="Logo da linguagem PHP" />
-          <Image width={60} height={60} src="/typescript.svg" alt="Logo da linguagem TypeScript" />
-          <Image width={60} height={60} src="/javascript.svg" alt="Logo da linguagem JavaScript" />
+          <TechBoxImage src="/next-js.svg" alt="Logo do framework web Next.js 13" />
+          <TechBoxImage src="/react.svg" alt="Logo da biblioteca React" />
+          <TechBoxImage src="/php.svg" alt="Logo da linguagem PHP" />
+          <TechBoxImage src="/typescript.svg" alt="Logo da linguagem TypeScript" />
+          <TechBoxImage src="/javascript.svg" alt="Logo da linguagem JavaScript" />
         </div>
       </section>
     </main>
