@@ -19,7 +19,10 @@ export class Me {
       { name: "JavaScript", icon: "/javascript.svg" },
       { name: "TypeScript", icon: "/typescript.svg" },
       { name: "React.js", icon: "/react.svg" },
-      { name: "Next.js", icon: "/next-js.svg" }
+      { name: "Next.js", icon: "/next-js.svg" },
+      { name: "Java", icon: "/java.svg" },
+      { name: "Kotlin", icon: "/kotlin.svg" },
+      { name: "React Native", icon: "/react-native.svg" },
     ];
   }
 
