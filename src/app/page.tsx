@@ -1,4 +1,5 @@
 import { TechBoxImage } from "@/components/TechBoxImage"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Me } from "@/utils/database-in-memory"
 import Link from "next/link"
 
@@ -34,11 +35,22 @@ export default function Home() {
       <section>
         <h2 className="text-2xl font-bold mb-4 uppercase">Tecnologias</h2>
         
-        <div className="flex items-center gap-4">
-          {me.myTechs.map((tech) => {
-              return <TechBoxImage key={tech.name} src={tech.icon} alt={tech.name} />
-          })}
-        </div>
+        <Carousel 
+          className="flex items-center gap-4"
+          opts={{ align: "start", }}
+        >
+          <CarouselPrevious />
+          <CarouselContent>
+            {me.myTechs.map((tech) => {
+              return (
+                <CarouselItem key={tech.name} className="basis-1/7">
+                  <TechBoxImage src={tech.icon} alt={tech.name} />
+                </CarouselItem>
+              )
+            })}
+          </CarouselContent>
+          <CarouselNext />
+        </Carousel>
       </section>
     </main>
   )
