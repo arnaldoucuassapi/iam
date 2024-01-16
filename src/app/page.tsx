@@ -1,4 +1,4 @@
-import { TechBoxImage } from "@/components/TechBoxImage"
+import { TechCard } from "@/components/TechCard"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Me } from "@/utils/database-in-memory"
 import Link from "next/link"
@@ -44,7 +44,7 @@ export default function Home() {
             {me.myTechs.map((tech) => {
               return (
                 <CarouselItem key={tech.name} className="basis-1/7">
-                  <TechBoxImage src={tech.icon} alt={tech.name} />
+                  <TechCard src={tech.icon} alt={tech.name} />
                 </CarouselItem>
               )
             })}
