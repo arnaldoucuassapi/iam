@@ -1,21 +1,29 @@
 import { TechBoxImage } from "@/components/TechBoxImage"
-import Image from "next/image"
+import { Me } from "@/utils/database-in-memory"
 import Link from "next/link"
 
 export default function Home() {
+  const me = new Me();
+  const maximumAreaIndex = me.myAreas.length - 1;
+
   return (
     <main>
       <section className="my-12">
         <div className="relative max-w-max">
-          <h1 className="text-5xl font-extrabold z-50">Hey, I’m Arnaldo Ucuassapi 👋</h1>
+          <h1 className="text-5xl font-extrabold z-50">Hey, I’m {me.myFullName} 👋</h1>
           <div className="absolute top-1 right-20 z-10 -rotate-3 bg-violet-600 w-96 h-10 opacity-10"></div>
         </div>
 
-        <p className="text-2xl font-semibold my-2">Full Stack & Mobile <span className="underline">Developer</span></p>
+        <p className="text-2xl font-semibold my-2">
+          {me.myAreas.map((myArea, index) => {
+            return (maximumAreaIndex > index) ? `${myArea} & ` : `${myArea} `;
+          })}
+          <span className="underline">Developer</span>
+        </p>
 
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-          <p className="text-lg">Construindo ótimas soluções para os problemas computacionais</p>
+          <p className="text-lg">{me.myDescription}</p>
         </div>
 
         <Link download="/cv-arnaldoucuassapi.pdf" href="#" target="_blank">
@@ -27,11 +35,9 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-4 uppercase">Tecnologias</h2>
         
         <div className="flex items-center gap-4">
-          <TechBoxImage src="/next-js.svg" alt="Logo do framework web Next.js 13" />
-          <TechBoxImage src="/react.svg" alt="Logo da biblioteca React" />
-          <TechBoxImage src="/php.svg" alt="Logo da linguagem PHP" />
-          <TechBoxImage src="/typescript.svg" alt="Logo da linguagem TypeScript" />
-          <TechBoxImage src="/javascript.svg" alt="Logo da linguagem JavaScript" />
+          {me.myTechs.map((tech) => {
+              return <TechBoxImage key={tech.name} src={tech.icon} alt={tech.name} />
+          })}
         </div>
       </section>
     </main>
