@@ -5,7 +5,7 @@
 :root {
   --dots-size: 2px;
   --dots-gap: 24px;
-  --dots-color: rgba(242, 242, 242, 0.170);
+  --dots-color: rgba(242, 242, 242, 0.100);
 }
 
 .background {
