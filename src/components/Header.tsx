@@ -9,8 +9,8 @@ export function Header() {
       <Logo />
 
       <Navigation.Root>
-        <Navigation.Item title="Home" />
-        <Navigation.Item title="Sobre" />
+        <Navigation.Item title="Home" active />
+        <Navigation.Item title="About" />
         <Navigation.Item title="Contact" />
         <Navigation.Item title="EN" />
       </Navigation.Root>

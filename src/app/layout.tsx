@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} bg-zinc-950 text-white px-16 background`}>
+      <body className={`${manrope.className} bg-zinc-950 text-white px-16`}>
         <Header />
         {children}
       </body>

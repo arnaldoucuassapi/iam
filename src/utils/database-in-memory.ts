@@ -12,17 +12,16 @@ export class Me {
 
   constructor() {
     this.fullName = "Arnaldo Ucuassapi";
-    this.description = "Construindo ótimas soluções para os problemas computacionais";
+    this.description = "Construindo ótimas soluções para os problemas computacionais!";
     this.areas = ["FullStack", "Mobile"];
     this.techs = [
       { name: "PHP", icon: "/php.svg" },
       { name: "JavaScript", icon: "/javascript.svg" },
       { name: "TypeScript", icon: "/typescript.svg" },
-      { name: "React.js", icon: "/react.svg" },
-      { name: "Next.js", icon: "/next-js.svg" },
-      { name: "Next.js", icon: "/next-js.svg" },
       { name: "Java", icon: "/java.svg" },
       { name: "Kotlin", icon: "/kotlin.svg" },
+      { name: "React.js", icon: "/react.svg" },
+      { name: "Next.js", icon: "/next-js.svg" },
       { name: "React Native", icon: "/react-native.svg" },
     ];
   }

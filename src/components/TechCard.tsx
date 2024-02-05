@@ -6,7 +6,7 @@ export function TechCard({ ...props }: ImageProps) {
     <div className="w-[106px] h-[106px] cursor-pointer grid place-items-center rounded-md bg-zinc-800 border border-zinc-700">
       <Image 
         {...props}
-        className="grayscale" 
+        className="grayscale hover:grayscale-0 transition-all" 
         width={40}
         height={40} 
         src={props.src} 
