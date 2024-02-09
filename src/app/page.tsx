@@ -66,9 +66,19 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
-
       
-     
+      <section className="bg-zinc-900/20 border border-zinc-900 my-12 rounded-lg drop-shadow-xl">
+        <div className="bg-gradient-to-r from-zinc-900 to-violet-500 text-transparent w-full h-2 rounded-tl-lg rounded-tr-lg"></div>
+
+        <div className="flex justify-between space-x-8 p-8">
+          <div className="flex-1 space-y-4">
+            <h2 className="font-bold text-2xl">About me...</h2>
+            <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia adipisci, harum nesciunt sint dolorem reprehenderit officiis in necessitatibus labore voluptatibus libero dolores minus rem distinctio veniam, commodi nobis consequatur doloribus!</p>
+            <p className="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia adipisci, harum nesciunt sint dolorem reprehenderit officiis in necessitatibus labore voluptatibus libero dolores minus rem distinctio veniam, commodi nobis consequatur doloribus!</p>
+          </div>
+          <div className="bg-zinc-700 border drop-shadow-2xl border-zinc-800 w-72 h-96 rounded-lg profile-img"></div>
+        </div>
+      </section>
     </main>
   )
 }
