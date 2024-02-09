@@ -2,6 +2,7 @@ import { TechCard } from "@/components/TechCard"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Me } from "@/utils/database-in-memory"
+import Image from "next/image";
 import Link from "next/link"
 
 export default function Home() {
@@ -25,21 +26,21 @@ export default function Home() {
         </p>
 
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+          <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
           <p className="text-lg">{me.myDescription}</p>
         </div>
 
         <Link download="/cv-arnaldoucuassapi.pdf" href="#" target="_blank">
-          <button className="py-2.5 px-8 mt-6 bg-white border border-zinc-600 hover:bg-white/50 drop-shadow transition-opacity rounded-md text-zinc-900 font-semibold uppercase">
-            Baixar meu CV
+          <button className="py-2 px-8 mt-6 bg-zinc-900 border border-zinc-800 hover:bg-violet-500 drop-shadow transition-opacity rounded-md text-zinc-100 font-semibold">
+            Donwload CV
           </button>
         </Link>
 
-        <div className=""></div>
+        <div className="w-48 h-48 bg-violet-300/20 absolute top-16 right-0 blur-3xl"></div>
       </section>
 
       <section>
-        <h2 className="text-xl font-bold mb-4 uppercase">Tecnologias</h2>
+        <h2 className="text-2xl font-bold mb-4">Skills</h2>
         
         <Carousel 
           className="grid items-center gap-4"
@@ -65,6 +66,9 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
+
+      
+     
     </main>
   )
 }
