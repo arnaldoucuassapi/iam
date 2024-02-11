@@ -1,8 +1,6 @@
 import { TechCard } from "@/components/TechCard"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Me } from "@/utils/database-in-memory"
-import Image from "next/image";
 import Link from "next/link"
 
 export default function Home() {
@@ -50,16 +48,9 @@ export default function Home() {
           <CarouselContent>
             {me.myTechs.map((tech) => {
               return (
-                <HoverCard key={tech.name}>
-                  <HoverCardTrigger>
-                    <CarouselItem className="basis-1/7">
-                      <TechCard src={tech.icon} alt={tech.name} />
-                    </CarouselItem>
-                  </HoverCardTrigger>
-                  <HoverCardContent>
-                    {tech.name}
-                  </HoverCardContent>
-                </HoverCard>
+                <CarouselItem key={tech.name} className="basis-1/7">
+                  <TechCard src={tech.icon} alt={tech.name} />
+                </CarouselItem>
               )
             })}
           </CarouselContent>
