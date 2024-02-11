@@ -12,7 +12,7 @@ export class Me {
 
   constructor() {
     this.fullName = "Arnaldo Ucuassapi";
-    this.description = "Construindo ótimas soluções para os problemas computacionais!";
+    this.description = "Building great solutions for computational problems!";
     this.areas = ["FullStack", "Mobile"];
     this.techs = [
       { name: "PHP", icon: "/php.svg" },
