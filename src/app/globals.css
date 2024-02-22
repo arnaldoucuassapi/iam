@@ -10,6 +10,9 @@
 
 body {
   font-family: Lexend !important;
+  background-repeat: no-repeat;
+  background-position: right;
+  backdrop-filter: blur(6rem) saturate(4);
 }
 
 body:after {

@@ -2,6 +2,7 @@ import { TechCard } from "@/components/TechCard"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Me } from "@/utils/database-in-memory"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Home() {
   const me = new Me();
@@ -12,7 +13,7 @@ export default function Home() {
       <section className="my-12">
         <div>
           <h1 className="text-4xl font-extrabold z-50">
-            Hey, I’m <span className="text-violet-500">{me.myFullName}</span> 👋
+            Hey, I’m <span className="bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text">{me.myFullName}</span> 👋
           </h1>
         </div>
 
@@ -20,7 +21,7 @@ export default function Home() {
           {me.myAreas.map((myArea, index) => {
             return (maximumAreaIndex > index) ? `${myArea} & ` : `${myArea} `;
           })}
-          <span className="underline text-violet-400">Developer</span>
+          <span className="underline text-blue-400">Developer</span>
         </p>
 
         <div className="flex items-center gap-2">
@@ -29,12 +30,12 @@ export default function Home() {
         </div>
 
         <Link download="/cv-arnaldoucuassapi.pdf" href="#" target="_blank">
-          <button className="py-2 px-8 mt-6 bg-zinc-900 border border-zinc-800 hover:bg-violet-500 drop-shadow transition-opacity rounded-md text-zinc-100 font-semibold">
-            Donwload CV
+          <button className="py-2 px-8 mt-6 hover:bg-zinc-800 transition-colors border border-zinc-800 bg-blue-500 drop-shadow rounded-full text-zinc-100 font-semibold">
+            See my document
           </button>
         </Link>
 
-        <div className="w-48 h-48 bg-violet-300/20 absolute top-16 right-0 blur-3xl"></div>
+        <div className="w-48 h-48 bg-blue-300/10 absolute top-32 right-64 blur-3xl"></div>
       </section>
 
       <section>
@@ -59,7 +60,7 @@ export default function Home() {
       </section>
       
       <section className="bg-zinc-900/20 border border-zinc-900 my-12 rounded-lg drop-shadow-xl">
-        <div className="bg-gradient-to-r from-zinc-900 to-violet-500 text-transparent w-full h-2 rounded-tl-lg rounded-tr-lg"></div>
+        <div className="bg-gradient-to-r from-zinc-900 to-blue-500 text-transparent w-full h-2 rounded-tl-lg rounded-tr-lg"></div>
 
         <div className="flex justify-between space-x-8 p-8">
           <div className="flex-1 space-y-4">
