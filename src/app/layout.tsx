@@ -7,8 +7,8 @@ import { Footer } from '@/components/Footer'
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'arnaldoucuassapi',
-  description: 'Hey, I’m Arnaldo Ucuassapi 👋',
+  title: 'Programmer | Arnaldo Ucuassapi Portfolio',
+  description: 'Hi, I’m Arnaldo Ucuassapi 👋',
 }
 
 export default function RootLayout({

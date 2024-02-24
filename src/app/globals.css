@@ -2,33 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --dots-size: 2px;
-  --dots-gap: 24px;
-  --dots-color: rgba(242, 242, 242, 0.050);
-}
-
 body {
   font-family: Lexend !important;
   background-repeat: no-repeat;
   background-position: right;
   backdrop-filter: blur(6rem) saturate(4);
-}
-
-body:after {
-  --computed-dot-size: calc(var(--dots-size)/2);
-  background-image: radial-gradient(var(--dots-color) var(--computed-dot-size),#0000 var(--computed-dot-size));
-  background-size: calc(var(--dots-gap) + var(--dots-size)) calc(var(--dots-gap) + var(--dots-size));
-  content: "";
-  -webkit-mask-image: linear-gradient(.54turn,#000,#0000 77.08%);
-  mask-image: linear-gradient(.54turn,#000,#0000 77.08%);
-  pointer-events: none
-}
-
-body:after {
-  inset: 0;
-  position: absolute;
-  z-index: -1
 }
 
 .profile-img {
