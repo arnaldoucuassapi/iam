@@ -1,8 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
 import { Navigation } from "./Navigation"
 import { Logo } from "./Logo"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
+import { MoonStar, SunMedium } from "lucide-react"
+import { Separator } from "./ui/separator"
 
 export function Header() {
   return (
@@ -10,9 +10,11 @@ export function Header() {
       <Logo />
 
       <Navigation.Root>
-        <Navigation.Item title="Home" active />
+        <Navigation.Item title="Work" active />
+        <Navigation.Item title="Projects" />
         <Navigation.Item title="About" />
         <Navigation.Item title="Contact" />
+
         <Select>
           <SelectTrigger>
             <SelectValue placeholder="EN" />
