@@ -4,7 +4,7 @@ import { Url } from "url";
 interface NavigationItemProps { 
   children?: React.ReactNode,
   title: string,
-  href?: Url,
+  href?: string,
   active?: boolean
 }
 

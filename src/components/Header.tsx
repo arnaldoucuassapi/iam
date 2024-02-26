@@ -1,6 +1,8 @@
+
 import { Navigation } from "./Navigation"
 import { Logo } from "./Logo"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
+import { useRouter } from "next/router"
 
 export function Header() {
   return (
@@ -8,9 +10,9 @@ export function Header() {
       <Logo />
 
       <Navigation.Root>
-        <Navigation.Item title="Work" active />
+        <Navigation.Item title="Work" href="/" active />
+        <Navigation.Item title="About" href="/about" />
         <Navigation.Item title="Projects" />
-        <Navigation.Item title="About" />
         <Navigation.Item title="Contact" />
 
         <Select>
